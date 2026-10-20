@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JW Jemal W TV - World Channels</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet Connection -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-jw">JW</span>
+      <span class="logo-title">Jemal <span class="highlight">W</span> TV</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#" class="active"><i class="fa-solid fa-globe"></i> World Channels</a>
+      <a href="#"><i class="fa-solid fa-tv"></i> Channels</a>
+      <a href="#"><i class="fa-solid fa-football-ball"></i> Football</a>
+      <a href="#"><i class="fa-solid fa-chart-line"></i> Live Scores</a>
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="badge"><i class="fa-solid fa-circle"></i> YOUR WORLD, ONE SCREEN</div>
+    <h1>Watch the world.<br>Follow every match.</h1>
+    <p>Discover official TV channels, explore by country, and follow football scores.</p>
+    <a href="#channels-section" class="btn-primary">Explore channels <i class="fa-solid fa-arrow-right"></i></a>
+  </section>
+
+  <!-- Channels & Filters Section -->
+  <section class="channels-section" id="channels-section">
+    <div class="section-header">
+      <h2>World channels</h2>
+      <p>Choose a channel to visit its official website.</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-container">
+      <span class="channel-count"><strong id="total-count">17</strong> channels</span>
+      <div class="filters">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search-input" placeholder="Search channels...">
+        </div>
+        <select id="country-filter">
+          <option value="all">All countries</option>
+          <option value="Qatar">Qatar</option>
+          <option value="United States">United States</option>
+          <option value="Germany">Germany</option>
+          <option value="UK">UK</option>
+        </select>
+        <select id="category-filter">
+          <option value="all">All categories</option>
+          <option value="NEWS">NEWS</option>
+          <option value="SCIENCE">SCIENCE</option>
+          <option value="SPORTS">SPORTS</option>
+          <option value="ENTERTAINMENT">ENTERTAINMENT</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Channels Grid -->
+    <div class="channels-grid" id="channels-grid">
+      <!-- Cards generated dynamically via app.js -->
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
