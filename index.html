@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JW Jemal W TV - Global TV & Sports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- HLS.js for Smooth Low-Network Streaming -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-jw">JW</span>
+      <span class="logo-title">Jemal <span class="highlight">W</span> TV</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#" class="active"><i class="fa-solid fa-tv"></i> Live TV</a>
+      <a href="#" id="settings-tab-btn"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+  </header>
+
+  <!-- Main TV Interface Layout -->
+  <main class="tv-main-container" id="tv-app-view">
+    
+    <!-- Left/Top: Real TV Player Screen -->
+    <section class="tv-player-section">
+      <div class="tv-screen-wrapper">
+        <video id="native-tv-player" controls autoplay playsinline></video>
+        <div class="tv-overlay-info" id="tv-watermark">JW TV HD</div>
+      </div>
+      <div class="current-playing-bar">
+        <div class="channel-indicator">
+          <span id="playing-code" class="p-code">JW</span>
+          <div>
+            <h2 id="playing-title">ማጫወቻውን ለመጀመር ቻናል ይምረጡ</h2>
+            <p id="playing-category">Global TV & Sports Network</p>
+          </div>
+        </div>
+        <div class="player-status">
+          <span class="live-dot"></span> LIVE (Low-Net Optimized)
+        </div>
+      </div>
+    </section>
+
+    <!-- Right/Bottom: Channels Directory & Playlist -->
+    <section class="tv-sidebar-section">
+      <div class="sidebar-header">
+        <h3>World & Sports Channels</h3>
+        <span id="channel-count">0 ቻናሎች</span>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="tv-controls">
+        <div class="tv-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search-input" placeholder="ቻናሎችን ይፈልጉ...">
+        </div>
+        <select id="category-filter">
+          <option value="all">ሁሉም አይነቶች</option>
+          <option value="SPORTS">⚽ ስፖርት (Sports)</option>
+          <option value="NEWS">📰 ዜና (News)</option>
+          <option value="ENTERTAINMENT">🎬 መዝናኛ (Entertainment)</option>
+        </select>
+      </div>
+
+      <!-- Channels List (TV Playlist Style) -->
+      <div class="channels-playlist" id="channels-playlist">
+        <!-- Dynamic Channel Items -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Settings View (Hidden by default) -->
+  <section class="settings-container" id="settings-view" style="display: none;">
+    <div class="settings-card">
+      <h2><i class="fa-solid fa-gear"></i> የአፕ ማስተካከያ (Settings)</h2>
+      
+      <div class="setting-item">
+        <div>
+          <h4>Dark Mode / Light Mode</h4>
+          <p>ገጽታውን መቀየር (ቀንና ማታ)</p>
+        </div>
+        <button id="theme-toggle-btn" class="btn-theme-toggle">
+          <i class="fa-solid fa-moon"></i> Dark Theme
+        </button>
+      </div>
+
+      <div class="setting-item">
+        <div>
+          <h4>Network Mode</h4>
+          <p>ለቀላል እና ለዝቅተኛ ኔትወርክ የተስተካከለ (Low Data Mode)</p>
+        </div>
+        <span class="badge-active">On</span>
+      </div>
+
+      <div class="setting-item">
+        <div>
+          <h4>App Version</h4>
+          <p>JW Jemal W TV Pro v3.0</p>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="back-to-tv-btn"><i class="fa-solid fa-arrow-left"></i> ወደ ቲቪ ተመለስ</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
